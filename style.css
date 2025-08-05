@@ -1,18 +1,172 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-* {
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-html,
-body {
-  margin: 0px;
+.frame {
+  background-color: #ffffff;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  width: 100vw;
+  min-height: 100vh;
   height: 100%;
 }
-/* a blue color as a generic focus style */
-button:focus-visible {
-  outline: 2px solid #4a90e2 !important;
-  outline: -webkit-focus-ring-color auto 5px !important;
+
+.frame .overlap-group-wrapper {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 481px;
+  height: 662px;
 }
-a {
-  text-decoration: none;
+
+.frame .overlap-group {
+  position: relative;
+  width: 522px;
+  height: 662px;
+  background-color: #ffffff;
+}
+
+.frame .overlap {
+  position: absolute;
+  width: 522px;
+  height: 53px;
+  top: 0;
+  left: 0;
+  background-color: #8debf7;
+}
+
+.frame .image {
+  width: 35px;
+  height: 35px;
+  top: 9px;
+  left: 11px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.frame .div {
+  position: absolute;
+  width: 522px;
+  height: 609px;
+  top: 53px;
+  left: 0;
+}
+
+.frame .overlap-2 {
+  position: absolute;
+  width: 522px;
+  height: 609px;
+  top: 0;
+  left: 0;
+}
+
+.frame .rectangle {
+  position: absolute;
+  width: 11px;
+  height: 609px;
+  top: 0;
+  left: 0;
+  background-color: #d9d9d9;
+}
+
+.frame .rectangle-2 {
+  width: 7px;
+  height: 72px;
+  top: 232px;
+  left: 7px;
+  border-radius: 3px;
+  position: absolute;
+  background-color: #d9d9d9;
+}
+
+.frame .rectangle-3 {
+  width: 522px;
+  height: 35px;
+  top: 574px;
+  left: 0;
+  position: absolute;
+  background-color: #d9d9d9;
+}
+
+.frame .img {
+  width: 20px;
+  height: 20px;
+  top: 258px;
+  left: 14px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.frame .ellipse {
+  position: absolute;
+  width: 112px;
+  height: 112px;
+  top: 36px;
+  left: 50px;
+  object-fit: cover;
+}
+
+.frame .parun-chumnankul-m {
+  position: absolute;
+  width: 286px;
+  top: 61px;
+  left: 224px;
+  font-family: "PoetsenOne-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper {
+  position: absolute;
+  width: 286px;
+  top: 212px;
+  left: 178px;
+  font-family: "PoetsenOne-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .overlap-3 {
+  position: absolute;
+  width: 290px;
+  height: 125px;
+  top: 303px;
+  left: 102px;
+}
+
+.frame .p {
+  position: absolute;
+  width: 290px;
+  top: 73px;
+  left: 0;
+  font-family: "PoetsenOne-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .text-wrapper-2 {
+  position: absolute;
+  width: 290px;
+  top: 0;
+  left: 0;
+  font-family: "PoetsenOne-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.frame .image-2 {
+  width: 88px;
+  height: 88px;
+  top: 185px;
+  left: 62px;
+  position: absolute;
+  object-fit: cover;
 }
