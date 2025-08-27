@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Navigation Menu - Parun Chumnankul</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Floating Elements -->
+    <div class="floating-element" style="top: 10%; left: 5%;">🏠</div>
+    <div class="floating-element" style="top: 25%; right: 8%;">🎯</div>
+    <div class="floating-element" style="bottom: 30%; left: 10%;">💼</div>
+    <div class="floating-element" style="bottom: 15%; right: 12%;">📞</div>
+    <div class="floating-element" style="top: 40%; left: 15%;">🏆</div>
+    
+    <main class="frame">
+      <nav class="overlap-group-wrapper" role="navigation" aria-label="Main navigation">
+        <div class="overlap-group" style="display: flex; flex-direction: column; gap: 20px; align-items: center; padding: 40px; text-align: center;">
+          
+          <div style="margin-bottom: 30px;">
+            <h1 style="color: white; font-family: 'Space Grotesk', sans-serif; font-size: 2rem; margin-bottom: 10px; background: linear-gradient(135deg, #ffffff, #e0e7ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">เมนูหลัก</h1>
+            <p style="opacity: 0.8; font-size: 1rem;">เลือกหน้าที่ต่องการเข้าชม</p>
+          </div>
+          
+          <a href="index.html" class="nav-link" role="menuitem" style="width: 100%; max-width: 300px; padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; display: flex; align-items: center; gap: 15px; transition: all 0.3s ease; text-decoration: none; color: white; margin: 10px 0;" onmouseover="this.style.background='rgba(255, 255, 255, 0.2)'; this.style.transform='translateY(-5px)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)'">
+            <div style="width: 50px; height: 50px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">🏠</div>
+            <div>
+              <div style="font-weight: 600; font-size: 1.1rem;">หน้าแรก</div>
+              <div style="font-size: 0.9rem; opacity: 0.7;">Home - ข้อมูลส่วนตัว</div>
+            </div>
+          </a>
+          
+          <a href="page2.html" class="nav-link" role="menuitem" style="width: 100%; max-width: 300px; padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; display: flex; align-items: center; gap: 15px; transition: all 0.3s ease; text-decoration: none; color: white; margin: 10px 0;" onmouseover="this.style.background='rgba(255, 255, 255, 0.2)'; this.style.transform='translateY(-5px)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)'">
+            <div style="width: 50px; height: 50px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">💼</div>
+            <div>
+              <div style="font-weight: 600; font-size: 1.1rem;">ผลงาน</div>
+              <div style="font-size: 0.9rem; opacity: 0.7;">Portfolio - โครงการต่างๆ</div>
+            </div>
+          </a>
+          
+          <a href="page3.html" class="nav-link" role="menuitem" style="width: 100%; max-width: 300px; padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; display: flex; align-items: center; gap: 15px; transition: all 0.3s ease; text-decoration: none; color: white; margin: 10px 0;" onmouseover="this.style.background='rgba(255, 255, 255, 0.2)'; this.style.transform='translateY(-5px)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)'">
+            <div style="width: 50px; height: 50px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">🎯</div>
+            <div>
+              <div style="font-weight: 600; font-size: 1.1rem;">ทักษะและการศึกษา</div>
+              <div style="font-size: 0.9rem; opacity: 0.7;">Skills & Education</div>
+            </div>
+          </a>
+          
+          <a href="page4.html" class="nav-link" role="menuitem" style="width: 100%; max-width: 300px; padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; display: flex; align-items: center; gap: 15px; transition: all 0.3s ease; text-decoration: none; color: white; margin: 10px 0;" onmouseover="this.style.background='rgba(255, 255, 255, 0.2)'; this.style.transform='translateY(-5px)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)'">
+            <div style="width: 50px; height: 50px; background: #f59e0b; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">📞</div>
+            <div>
+              <div style="font-weight: 600; font-size: 1.1rem;">ติดต่อ</div>
+              <div style="font-size: 0.9rem; opacity: 0.7;">Contact - ช่องทางติดต่อ</div>
+            </div>
+          </a>
+          
+          <a href="page5.html" class="nav-link" role="menuitem" style="width: 100%; max-width: 300px; padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 15px; display: flex; align-items: center; gap: 15px; transition: all 0.3s ease; text-decoration: none; color: white; margin: 10px 0;" onmouseover="this.style.background='rgba(255, 255, 255, 0.2)'; this.style.transform='translateY(-5px)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)'">
+            <div style="width: 50px; height: 50px; background: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">🏆</div>
+            <div>
+              <div style="font-weight: 600; font-size: 1.1rem;">เกียรติประวัติ</div>
+              <div style="font-size: 0.9rem; opacity: 0.7;">Certificates - ใบรับรอง</div>
+            </div>
+          </a>
+          
+          <!-- Quick Info -->
+          <div style="margin-top: 30px; padding: 20px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.1);">
+            <div style="font-size: 0.9rem; opacity: 0.8; text-align: center;">
+              <div style="margin-bottom: 5px;">🎓 Parun Chumnankul</div>
+              <div style="margin-bottom: 5px;">📚 M.6/2 No.8</div>
+              <div>🏫 Suankularb Wittayalai Nonthaburi</div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </main>
+    
+    <script>
+      // Custom cursor functionality
+      const cursor = document.querySelector('.cursor');
+      const cursorFollower = document.querySelector('.cursor-follower');
+      
+      let mouseX = 0, mouseY = 0;
+      let cursorX = 0, cursorY = 0;
+      let followerX = 0, followerY = 0;
+      
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+      
+      function updateCursor() {
+        cursorX += (mouseX - cursorX) * 0.1;
+        cursorY += (mouseY - cursorY) * 0.1;
+        
+        followerX += (mouseX - followerX) * 0.05;
+        followerY += (mouseY - followerY) * 0.05;
+        
+        cursor.style.left = cursorX - 10 + 'px';
+        cursor.style.top = cursorY - 10 + 'px';
+        
+        cursorFollower.style.left = followerX - 4 + 'px';
+        cursorFollower.style.top = followerY - 4 + 'px';
+        
+        requestAnimationFrame(updateCursor);
+      }
+      updateCursor();
+      
+      // Hover effects
+      const hoverElements = document.querySelectorAll('a, button, .overlap-group-wrapper, .nav-link');
+      
+      hoverElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cursor.classList.add('hover');
+        });
+        
+        el.addEventListener('mouseleave', () => {
+          cursor.classList.remove('hover');
+        });
+      });
+      
+      // Parallax effect
+      document.addEventListener('mousemove', (e) => {
+        const floatingElements = document.querySelectorAll('.floating-element');
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        
+        floatingElements.forEach((element, index) => {
+          const speed = (index + 1) * 0.5;
+          const xMove = (x - 0.5) * speed * 50;
+          const yMove = (y - 0.5) * speed * 50;
+          
+          element.style.transform = `translate(${xMove}px, ${yMove}px)`;
+        });
+      });
+      
+      // Add click animation
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          // Create ripple effect
+          const ripple = document.createElement('div');
+          ripple.style.position = 'absolute';
+          ripple.style.borderRadius = '50%';
+          ripple.style.background = 'rgba(255, 255, 255, 0.3)';
+          ripple.style.transform = 'scale(0)';
+          ripple.style.animation = 'ripple 0.6s linear';
+          ripple.style.left = (e.clientX - this.getBoundingClientRect().left - 25) + 'px';
+          ripple.style.top = (e.clientY - this.getBoundingClientRect().top - 25) + 'px';
+          ripple.style.width = '50px';
+          ripple.style.height = '50px';
+          
+          this.style.position = 'relative';
+          this.appendChild(ripple);
+          
+          setTimeout(() => {
+            ripple.remove();
+          }, 600);
+        });
+      });
+      
+      // Add ripple animation keyframes
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes ripple {
+          to {
+            transform: scale(4);
+            opacity: 0;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    </script>
+  </body>
+</html>

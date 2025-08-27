@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Parun Chumnankul - Skills & Education</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="page3.html" class="nav-item active">Skills</a>
+      <a href="page2.html" class="nav-item">Portfolio</a>
+      <a href="page4.html" class="nav-item">Contact</a>
+      <a href="page5.html" class="nav-item">Certificates</a>
+    </nav>
+    
+    <!-- Floating Elements -->
+    <div class="floating-element" style="top: 10%; left: 8%;">🧠</div>
+    <div class="floating-element" style="top: 30%; right: 12%;">🎯</div>
+    <div class="floating-element" style="bottom: 20%; left: 10%;">📚</div>
+    <div class="floating-element" style="bottom: 35%; right: 8%;">⭐</div>
+    
+    <div class="frame">
+      <div class="overlap-group-wrapper">
+        <div class="overlap-group">
+          <div class="overlap">
+            <img class="image" src="https://via.placeholder.com/35/06b6d4/ffffff?text=🎯" alt="Skills Icon" />
+            <span style="font-weight: 600; font-size: 1.1rem;">Skills & Education</span>
+          </div>
+          <div class="div">
+            <div class="overlap-2">
+              <div class="rectangle"></div>
+              <div class="rectangle-2"></div>
+              <div class="rectangle-3"></div>
+              <img class="img" src="https://via.placeholder.com/25/ffffff/ffffff?text=📖" alt="Book" />
+            </div>
+            
+            <!-- Skills Section -->
+            <div class="overlap-3">
+              <div class="skills-grid">
+                <div class="skill-category">
+                  <h3>Hard Skills</h3>
+                  <div class="skill-item">🐍 Python Programming</div>
+                  <div class="skill-item">🌐 Web Development (HTML, CSS, JS)</div>
+                  <div class="skill-item">💾 Basic Database Knowledge</div>
+                  <div class="skill-item">🔧 Problem Solving & Debugging</div>
+                  <div class="skill-item">🎨 Basic UI/UX Design</div>
+                </div>
+                
+                <div class="skill-category">
+                  <h3>Soft Skills</h3>
+                  <div class="skill-item">👥 Leadership</div>
+                  <div class="skill-item">🤝 Teamworking</div>
+                  <div class="skill-item">🧩 Problem Solving</div>
+                  <div class="skill-item">💡 Creative Thinking</div>
+                  <div class="skill-item">📢 Communication</div>
+                </div>
+              </div>
+              
+              <div style="text-align: center; margin: 30px 0;">
+                <img class="image-2" src="https://via.placeholder.com/80/8b5cf6/ffffff?text=🐍" alt="Python Logo" />
+                <img class="image-3" src="https://via.placeholder.com/80/06b6d4/ffffff?text=🌐" alt="Web Dev" style="width: 80px; height: 80px; border-radius: 15px; object-fit: cover; margin-left: 20px;" />
+              </div>
+            </div>
+            
+            <!-- Education Timeline -->
+            <div class="overlap-4">
+              <h3 style="color: var(--accent); text-align: center; margin-bottom: 30px; font-family: 'Space Grotesk', sans-serif;">Education Timeline</h3>
+              
+              <div class="timeline">
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 25px; border-radius: 15px; margin-bottom: 20px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255, 255, 255, 0.1)'">
+                  <div class="overlap-5">
+                    <div class="line" style="width: 50px; height: 2px; background: var(--accent); margin: 10px 0;"></div>
+                  </div>
+                  <div class="text-wrapper-3" style="font-weight: 600; color: var(--accent);">Primary Education</div>
+                  <div class="text-wrapper-4">Years 1-6</div>
+                  <div class="text-wrapper-6" style="font-size: 1.1rem; margin-top: 10px;">Phraharuthai Nonthaburi School</div>
+                  <p style="opacity: 0.8; margin-top: 10px; font-size: 0.9rem;">Foundation in basic academics, character development, and early learning skills.</p>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 25px; border-radius: 15px; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.background='rgba(255, 255, 255, 0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.background='rgba(255, 255, 255, 0.1)'">
+                  <div class="overlap-5">
+                    <div class="line-2" style="width: 50px; height: 2px; background: var(--secondary); margin: 10px 0;"></div>
+                  </div>
+                  <div class="text-wrapper-3" style="font-weight: 600; color: var(--secondary);">Secondary Education</div>
+                  <div class="text-wrapper-5">Years 7-12 (Current)</div>
+                  <div class="text-wrapper-7" style="font-size: 1.1rem; margin-top: 10px;">Suankularb Wittayalai Nonthaburi School</div>
+                  <p style="opacity: 0.8; margin-top: 10px; font-size: 0.9rem;">Currently in M.6/2, focusing on science, technology, and computer programming studies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      // Custom cursor functionality
+      const cursor = document.querySelector('.cursor');
+      const cursorFollower = document.querySelector('.cursor-follower');
+      
+      let mouseX = 0, mouseY = 0;
+      let cursorX = 0, cursorY = 0;
+      let followerX = 0, followerY = 0;
+      
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+      
+      function updateCursor() {
+        cursorX += (mouseX - cursorX) * 0.1;
+        cursorY += (mouseY - cursorY) * 0.1;
+        
+        followerX += (mouseX - followerX) * 0.05;
+        followerY += (mouseY - followerY) * 0.05;
+        
+        cursor.style.left = cursorX - 10 + 'px';
+        cursor.style.top = cursorY - 10 + 'px';
+        
+        cursorFollower.style.left = followerX - 4 + 'px';
+        cursorFollower.style.top = followerY - 4 + 'px';
+        
+        requestAnimationFrame(updateCursor);
+      }
+      updateCursor();
+      
+      // Hover effects
+      const hoverElements = document.querySelectorAll('a, button, .overlap-group-wrapper, .skill-category, .nav-item, .image-2, .image-3');
+      
+      hoverElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cursor.classList.add('hover');
+        });
+        
+        el.addEventListener('mouseleave', () => {
+          cursor.classList.remove('hover');
+        });
+      });
+      
+      // Parallax effect
+      document.addEventListener('mousemove', (e) => {
+        const floatingElements = document.querySelectorAll('.floating-element');
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        
+        floatingElements.forEach((element, index) => {
+          const speed = (index + 1) * 0.5;
+          const xMove = (x - 0.5) * speed * 50;
+          const yMove = (y - 0.5) * speed * 50;
+          
+          element.style.transform = `translate(${xMove}px, ${yMove}px)`;
+        });
+      });
+    </script>
+  </body>
+</html>
