@@ -13,6 +13,41 @@
     
     <!-- Navigation -->
     <nav class="nav">
+      <div class="hamburger-menu">
+        <button class="hamburger-btn" id="hamburgerBtn">
+          <div class="hamburger-icon">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+          </div>
+        </button>
+        <div class="hamburger-dropdown" id="hamburgerDropdown">
+          <a href="index.html">
+            <span class="menu-icon">🏠</span>
+            <span>Home</span>
+          </a>
+          <a href="page3.html">
+            <span class="menu-icon">🎯</span>
+            <span>Skills</span>
+          </a>
+          <a href="page2.html" class="current">
+            <span class="menu-icon">💼</span>
+            <span>Portfolio</span>
+          </a>
+          <a href="page4.html">
+            <span class="menu-icon">📞</span>
+            <span>Contact</span>
+          </a>
+          <a href="page5.html">
+            <span class="menu-icon">🏆</span>
+            <span>Certificates</span>
+          </a>
+          <a href="overlay.html">
+            <span class="menu-icon">📋</span>
+            <span>Menu (Thai)</span>
+          </a>
+        </div>
+      </div>
       <a href="index.html" class="nav-item">Home</a>
       <a href="page3.html" class="nav-item">Skills</a>
       <a href="page2.html" class="nav-item active">Portfolio</a>
@@ -30,8 +65,8 @@
       <div class="overlap-group-wrapper">
         <div class="overlap-group">
           <div class="overlap">
-            <img class="image" src="https://via.placeholder.com/35/8b5cf6/ffffff?text=💼" alt="Portfolio Icon" />
-            <span style="font-weight: 600; font-size: 1.1rem;">My Portfolio & Projects</span>
+            <div style="width: 35px; height: 35px; background: var(--secondary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px;">💼</div>
+            <span style="font-weight: 600; font-size: 1.1rem; margin-left: 15px;">My Portfolio & Projects</span>
           </div>
           
           <div class="div" style="text-align: center;">
@@ -39,7 +74,7 @@
               <div class="rectangle"></div>
               <div class="rectangle-2"></div>
               <div class="rectangle-3"></div>
-              <img class="img" src="https://via.placeholder.com/25/ffffff/ffffff?text=🚀" alt="Rocket" />
+              <div class="img" style="width: 25px; height: 25px; position: absolute; left: 25px; top: 50%; transform: translateY(-50%); font-size: 18px; display: flex; align-items: center; justify-content: center;">🚀</div>
             </div>
             
             <h2 style="color: var(--accent); margin-bottom: 30px; font-family: 'Space Grotesk', sans-serif;">Featured Projects</h2>
@@ -72,7 +107,7 @@
             </div>
             
             <div style="margin-top: 40px;">
-              <img class="img" src="https://via.placeholder.com/100/06b6d4/ffffff?text=⚡" alt="Innovation" style="width: 100px; height: 100px; border-radius: 15px;" />
+              <div class="img" style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--accent), var(--primary)); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto; transition: all 0.3s ease;">⚡</div>
             </div>
             
             <div style="margin-top: 30px; padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 15px;">
@@ -90,6 +125,31 @@
     </div>
     
     <script>
+      // Hamburger menu functionality
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const hamburgerDropdown = document.getElementById('hamburgerDropdown');
+      
+      hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active');
+        hamburgerDropdown.classList.toggle('active');
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!hamburgerBtn.contains(e.target) && !hamburgerDropdown.contains(e.target)) {
+          hamburgerBtn.classList.remove('active');
+          hamburgerDropdown.classList.remove('active');
+        }
+      });
+      
+      // Close dropdown when a link is clicked
+      hamburgerDropdown.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+          hamburgerBtn.classList.remove('active');
+          hamburgerDropdown.classList.remove('active');
+        }
+      });
+      
       // Custom cursor functionality
       const cursor = document.querySelector('.cursor');
       const cursorFollower = document.querySelector('.cursor-follower');
@@ -121,7 +181,7 @@
       updateCursor();
       
       // Hover effects
-      const hoverElements = document.querySelectorAll('a, button, .overlap-group-wrapper, .certificate-item, .nav-item, span');
+      const hoverElements = document.querySelectorAll('a, button, .overlap-group-wrapper, .certificate-item, .nav-item, span, .hamburger-btn');
       
       hoverElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
