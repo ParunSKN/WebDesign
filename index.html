@@ -6,6 +6,7 @@
     <title>Parun Chumnankul - Home</title>
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="style.css" />
+    <script src="common.js"></script>
   </head>
   <body>
     <div class="cursor"></div>
@@ -61,129 +62,40 @@
     <div class="floating-element" style="bottom: 20%; left: 20%;">⚡</div>
     <div class="floating-element" style="bottom: 10%; right: 10%;">🚀</div>
     
-    <div class="frame">
-      <div class="overlap-group-wrapper">
-        <div class="overlap-group">
-          <div class="overlap">
-            <img class="image" src="img/logo.png" alt="Your Logo" />
-            <span style="font-weight: 600; font-size: 1.1rem;">Welcome to My Portfolio</span>
+    <main class="main-content">
+      <div class="content-card">
+        <header class="card-header">
+          <img class="logo" src="img/logo.png" alt="Your Logo" />
+          <h1 class="welcome-title">Welcome to My Portfolio</h1>
+        </header>
+        
+        <div class="card-body">
+          <div class="profile-section">
+            <img class="profile-image" src="img/profile.jpg" alt="Parun Profile Picture" />
+            <h2 class="name">Parun Chumnankul</h2>
+            <p class="student-info">M.6/2 No.8</p>
+            <p class="school">Suankularb Wittayalai Nonthaburi</p>
           </div>
-          <div class="div">
-            <div class="overlap-2">
-              <div class="rectangle"></div>
-              <div class="rectangle-2"></div>
-              <div class="rectangle-3"></div>
-              <div class="img" style="width: 25px; height: 25px; position: absolute; left: 25px; top: 50%; transform: translateY(-50%); font-size: 18px; display: flex; align-items: center; justify-content: center;">⭐</div>
-            </div>
-            
-            <div style="text-align: center; margin-bottom: 30px;">
-              <img class="ellipse" src="img/profile.jpg" alt="Parun Profile Picture" />
-            </div>
-            
-            <div class="parun-chumnankul-m">Parun Chumnankul<br /><br />M.6/2 No.8</div>
-            <div class="text-wrapper">Suankularb Wittayalai Nonthaburi</div>
-            
-            <div class="overlap-3">
-              <div class="text-wrapper-2">
-                Hello, I'm Pund. I love technology and am willing to study computer engineering
-              </div>
-              <p class="p">
-                I am someone who has studied Python programming and basic web development. I have a foundational
-                understanding of how websites work, and I enjoy learning how to solve problems through code. My goal is
-                to further develop my skills and pursue a career in technology and computer engineering.
-              </p>
-            </div>
-            
-            <div style="text-align: center; margin-top: 30px;">
-              <div class="image-2" style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--accent), var(--secondary)); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto; transition: all 0.3s ease;">🎓</div>
-            </div>
+          
+          <div class="bio-section">
+            <p class="bio-intro">Hello, I'm Pund. I love technology and am willing to study computer engineering</p>
+            <p class="bio-description">
+              I am someone who has studied Python programming and basic web development. I have a foundational
+              understanding of how websites work, and I enjoy learning how to solve problems through code. My goal is
+              to further develop my skills and pursue a career in technology and computer engineering.
+            </p>
           </div>
+          
+          <div class="achievement-icon">🎓</div>
         </div>
       </div>
-    </div>
+    </main>
     
     <script>
-      // Hamburger menu functionality
-      const hamburgerBtn = document.getElementById('hamburgerBtn');
-      const hamburgerDropdown = document.getElementById('hamburgerDropdown');
-      
-      hamburgerBtn.addEventListener('click', () => {
-        hamburgerBtn.classList.toggle('active');
-        hamburgerDropdown.classList.toggle('active');
-      });
-      
-      // Close dropdown when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!hamburgerBtn.contains(e.target) && !hamburgerDropdown.contains(e.target)) {
-          hamburgerBtn.classList.remove('active');
-          hamburgerDropdown.classList.remove('active');
-        }
-      });
-      
-      // Close dropdown when a link is clicked
-      hamburgerDropdown.addEventListener('click', (e) => {
-        if (e.target.tagName === 'A') {
-          hamburgerBtn.classList.remove('active');
-          hamburgerDropdown.classList.remove('active');
-        }
-      });
-      // Custom cursor functionality
-      const cursor = document.querySelector('.cursor');
-      const cursorFollower = document.querySelector('.cursor-follower');
-      
-      let mouseX = 0, mouseY = 0;
-      let cursorX = 0, cursorY = 0;
-      let followerX = 0, followerY = 0;
-      
-      document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-      });
-      
-      function updateCursor() {
-        cursorX += (mouseX - cursorX) * 0.1;
-        cursorY += (mouseY - cursorY) * 0.1;
-        
-        followerX += (mouseX - followerX) * 0.05;
-        followerY += (mouseY - followerY) * 0.05;
-        
-        cursor.style.left = cursorX - 10 + 'px';
-        cursor.style.top = cursorY - 10 + 'px';
-        
-        cursorFollower.style.left = followerX - 4 + 'px';
-        cursorFollower.style.top = followerY - 4 + 'px';
-        
-        requestAnimationFrame(updateCursor);
+      // Page-specific hover selectors for index page
+      function getPageSpecificHoverSelectors() {
+        return '.content-card, .profile-image, .achievement-icon';
       }
-      updateCursor();
-      
-      // Hover effects
-      const hoverElements = document.querySelectorAll('a, button, .overlap-group-wrapper, .ellipse, .image-2, .nav-item, .hamburger-btn');
-      
-      hoverElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-          cursor.classList.add('hover');
-        });
-        
-        el.addEventListener('mouseleave', () => {
-          cursor.classList.remove('hover');
-        });
-      });
-      
-      // Parallax effect for floating elements
-      document.addEventListener('mousemove', (e) => {
-        const floatingElements = document.querySelectorAll('.floating-element');
-        const x = e.clientX / window.innerWidth;
-        const y = e.clientY / window.innerHeight;
-        
-        floatingElements.forEach((element, index) => {
-          const speed = (index + 1) * 0.5;
-          const xMove = (x - 0.5) * speed * 50;
-          const yMove = (y - 0.5) * speed * 50;
-          
-          element.style.transform = `translate(${xMove}px, ${yMove}px)`;
-        });
-      });
     </script>
   </body>
 </html>
