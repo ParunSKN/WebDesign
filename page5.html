@@ -13,6 +13,41 @@
     
     <!-- Navigation -->
     <nav class="nav">
+      <div class="hamburger-menu">
+        <button class="hamburger-btn" id="hamburgerBtn">
+          <div class="hamburger-icon">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+          </div>
+        </button>
+        <div class="hamburger-dropdown" id="hamburgerDropdown">
+          <a href="index.html">
+            <span class="menu-icon">🏠</span>
+            <span>Home</span>
+          </a>
+          <a href="page3.html">
+            <span class="menu-icon">🎯</span>
+            <span>Skills</span>
+          </a>
+          <a href="page2.html">
+            <span class="menu-icon">💼</span>
+            <span>Portfolio</span>
+          </a>
+          <a href="page4.html">
+            <span class="menu-icon">📞</span>
+            <span>Contact</span>
+          </a>
+          <a href="page5.html" class="current">
+            <span class="menu-icon">🏆</span>
+            <span>Certificates</span>
+          </a>
+          <a href="overlay.html">
+            <span class="menu-icon">📋</span>
+            <span>Menu (Thai)</span>
+          </a>
+        </div>
+      </div>
       <a href="index.html" class="nav-item">Home</a>
       <a href="page3.html" class="nav-item">Skills</a>
       <a href="page2.html" class="nav-item">Portfolio</a>
@@ -127,6 +162,31 @@
     </div>
     
     <script>
+      // Hamburger menu functionality
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const hamburgerDropdown = document.getElementById('hamburgerDropdown');
+      
+      hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active');
+        hamburgerDropdown.classList.toggle('active');
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!hamburgerBtn.contains(e.target) && !hamburgerDropdown.contains(e.target)) {
+          hamburgerBtn.classList.remove('active');
+          hamburgerDropdown.classList.remove('active');
+        }
+      });
+      
+      // Close dropdown when a link is clicked
+      hamburgerDropdown.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+          hamburgerBtn.classList.remove('active');
+          hamburgerDropdown.classList.remove('active');
+        }
+      });
+      
       // Custom cursor functionality
       const cursor = document.querySelector('.cursor');
       const cursorFollower = document.querySelector('.cursor-follower');
@@ -158,7 +218,7 @@
       updateCursor();
       
       // Hover effects
-      const hoverElements = document.querySelectorAll('a, button, .overlap-group-wrapper, .certificate-item, .nav-item');
+      const hoverElements = document.querySelectorAll('a, button, .overlap-group-wrapper, .certificate-item, .nav-item, .hamburger-btn');
       
       hoverElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
