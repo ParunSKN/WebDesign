@@ -62,51 +62,39 @@
     <div class="floating-element" style="bottom: 20%; left: 20%;">⚡</div>
     <div class="floating-element" style="bottom: 10%; right: 10%;">🚀</div>
     
-    <div class="frame">
-      <div class="overlap-group-wrapper">
-        <div class="overlap-group">
-          <div class="overlap">
-            <img class="image" src="img/logo.png" alt="Your Logo" />
-            <span style="font-weight: 600; font-size: 1.1rem;">Welcome to My Portfolio</span>
+    <main class="main-content">
+      <div class="content-card">
+        <header class="card-header">
+          <img class="logo" src="img/logo.png" alt="Your Logo" />
+          <h1 class="welcome-title">Welcome to My Portfolio</h1>
+        </header>
+        
+        <div class="card-body">
+          <div class="profile-section">
+            <img class="profile-image" src="img/profile.jpg" alt="Parun Profile Picture" />
+            <h2 class="name">Parun Chumnankul</h2>
+            <p class="student-info">M.6/2 No.8</p>
+            <p class="school">Suankularb Wittayalai Nonthaburi</p>
           </div>
-          <div class="div">
-            <div class="overlap-2">
-              <div class="rectangle"></div>
-              <div class="rectangle-2"></div>
-              <div class="rectangle-3"></div>
-              <div class="img" style="width: 25px; height: 25px; position: absolute; left: 25px; top: 50%; transform: translateY(-50%); font-size: 18px; display: flex; align-items: center; justify-content: center;">⭐</div>
-            </div>
-            
-            <div style="text-align: center; margin-bottom: 30px;">
-              <img class="ellipse" src="img/profile.jpg" alt="Parun Profile Picture" />
-            </div>
-            
-            <div class="parun-chumnankul-m">Parun Chumnankul<br /><br />M.6/2 No.8</div>
-            <div class="text-wrapper">Suankularb Wittayalai Nonthaburi</div>
-            
-            <div class="overlap-3">
-              <div class="text-wrapper-2">
-                Hello, I'm Pund. I love technology and am willing to study computer engineering
-              </div>
-              <p class="p">
-                I am someone who has studied Python programming and basic web development. I have a foundational
-                understanding of how websites work, and I enjoy learning how to solve problems through code. My goal is
-                to further develop my skills and pursue a career in technology and computer engineering.
-              </p>
-            </div>
-            
-            <div style="text-align: center; margin-top: 30px;">
-              <div class="image-2" style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--accent), var(--secondary)); border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto; transition: all 0.3s ease;">🎓</div>
-            </div>
+          
+          <div class="bio-section">
+            <p class="bio-intro">Hello, I'm Pund. I love technology and am willing to study computer engineering</p>
+            <p class="bio-description">
+              I am someone who has studied Python programming and basic web development. I have a foundational
+              understanding of how websites work, and I enjoy learning how to solve problems through code. My goal is
+              to further develop my skills and pursue a career in technology and computer engineering.
+            </p>
           </div>
+          
+          <div class="achievement-icon">🎓</div>
         </div>
       </div>
-    </div>
+    </main>
     
     <script>
       // Page-specific hover selectors for index page
       function getPageSpecificHoverSelectors() {
-        return '.overlap-group-wrapper, .ellipse, .image-2';
+        return '.content-card, .profile-image, .achievement-icon';
       }
     </script>
   </body>
